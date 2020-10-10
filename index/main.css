@@ -1,0 +1,168 @@
+
+body {
+  font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
+  color: #333;
+  font-size: 18px;
+}
+
+@keyframes bordergrow {
+  0% {
+    left: 25%;
+    width: 50%;
+    opacity: 0.4;
+  }
+
+  100% {
+    left: 0;
+    width: 100%;
+    opacity: 0.8;
+  }
+}
+
+.total a {
+  text-decoration: none;
+  color: #256c99;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.total a:after {
+  content: '';
+  height: 2px;
+  background: #256c99;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.total a:hover:after {
+  width: 100%;
+  animation-duration: .2s;
+  animation-name: bordergrow;
+  animation-iteration-count: 1;
+}
+
+.total a:visited {
+  color: #256c99;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+img {
+  max-width: 200px;
+  margin: 1.5rem auto 0.5rem;
+  border-radius: 9999px;
+  display: block;
+}
+
+h1 {
+  line-height: 1em;
+  margin: 2rem auto 0.5rem;
+}
+
+h2 {
+  line-height: 1em;
+  margin: 0 auto 0.5rem;
+  font-size: 1.2em;
+}
+
+p {
+  line-height: 1.8em;
+  margin: 0.25rem auto;
+}
+
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+  margin: 0.65rem 0 1.5rem;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li:first-child:before {
+  content: '';
+}
+
+ul li:before {
+  content: '•';
+}
+
+header p {
+  line-height: 1.4em;
+  /* margin-top: 0.75rem; */
+}
+
+@media only screen and (min-width: 800px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+
+  h1, h2, header p {
+    margin-left: 0;
+  }
+
+  .text-column {
+    margin-top: 1.2rem;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+  .450w {
+    max-width: 450px;
+  }
+  header.container {
+    margin-top: 2rem;
+  }
+  .total-container {
+    display: flex;
+    justify-items: center;
+    min-height: 79vh;
+    flex: 0 0 auto;
+    align-items: center;
+  }
+  .total {
+    margin: 0 auto;
+  }
+ul a {
+  margin: 0 0.35rem;
+}
+
+#confetti-canvas {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+#confetti-start:hover {
+}
+#confetti-start {
+    color: #6565653d;
+    font-size: 11px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 5px;
+    right: 9px;
+}
+}
